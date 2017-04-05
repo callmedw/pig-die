@@ -18,7 +18,7 @@ This application is a practice of constructors and prototypes using JavaScript t
   * **Example Input:** "Player rolls a one"
   * **Example Output:** "Turn Total: 0. Their turn is over"
 
-* If a player rolls any number besides a 1, the value of the dice is    added to their turn total.
+* If a player rolls any number besides a 1, the value of the dice is added to their turn total.
   * **Example Input:** "Player rolls a 4 and then rolls a 5"
   * **Example Output:** "Turn Total: 4 and then Turn Total: 9"
 
