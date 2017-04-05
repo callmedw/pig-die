@@ -16,6 +16,7 @@ Player.prototype.getSub = function(){
     this.subTotal += this.currentRoll;
   } else {
     this.subTotal = 0;
+    // alert("Whammy!");
   }
 }
 
@@ -35,8 +36,15 @@ $(document).ready(function() {
 
 // Player One Roll
   $("#p1-roll").last().click(function(){
-  player1.roll();
-  player1.getSub();
+    player1.roll();
+    player1.getSub();
+
+    if (player1.currentRoll === 1) {
+      alert("Player 1 Whammy!");
+      $("#player1Buttons").hide();
+      $("#player2Buttons").show();
+    }
+
     $("#p1-die-result").text("");
     $("#p1-die-result").text(player1.currentRoll);
     $("#p1-subTotal").text(player1.subTotal);
@@ -49,17 +57,24 @@ $(document).ready(function() {
     player1.getGrand();
     $("#p1-grand").text(player1.grand);
     $("#p1-subTotal").text("");
+    $("#player1Buttons").hide();
+    $("#player2Buttons").show();
   });
 
 // Player Two Roll
   $("#p2-roll").last().click(function(){
-  player2.roll();
-  player2.getSub();
+    player2.roll();
+    player2.getSub();
+    if (player2.currentRoll === 1) {
+        alert("Player 2 Whammy!");
+        $("#player2Buttons").hide();
+        $("#player1Buttons").show();
+  }
     $("#p2-die-result").text("");
     $("#p2-die-result").text(player2.currentRoll);
     $("#p2-subTotal").text(player2.subTotal);
   });
-  
+
 // Player Two Hold
   $("#p2-hold").last().click(function(){
     $("#p2-die-result").text("");
@@ -67,5 +82,7 @@ $(document).ready(function() {
     player2.getGrand();
     $("#p2-grand").text(player2.grand);
     $("#p2-subTotal").text("");
+    $("#player2Buttons").hide();
+    $("#player1Buttons").show();
   });
 });
