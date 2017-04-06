@@ -38,7 +38,6 @@ $(document).ready(function() {
   $("#p1-roll").last().click(function(){
     player1.roll();
     player1.getSub();
-
     if (player1.currentRoll === 1) {
       alert("Player 1 Whammy!");
       $("#player1Buttons").hide();
@@ -59,6 +58,13 @@ $(document).ready(function() {
     $("#p1-subTotal").text("");
     $("#player1Buttons").hide();
     $("#player2Buttons").show();
+    if (player1.grand >= 100) {
+      alert("Congratulations! Player 1 Wins!!!");
+      $("#p1-grand").text("");
+      $("#p1-grand").val(0).text("");
+      $("#p2-grand").text("");
+      $("#p2-grand").val(0).text("");
+    }
   });
 
 // Player Two Roll
@@ -70,6 +76,7 @@ $(document).ready(function() {
         $("#player2Buttons").hide();
         $("#player1Buttons").show();
   }
+
     $("#p2-die-result").text("");
     $("#p2-die-result").text(player2.currentRoll);
     $("#p2-subTotal").text(player2.subTotal);
@@ -80,9 +87,18 @@ $(document).ready(function() {
     $("#p2-die-result").text("");
     $("player2.subTotal").val(0).text("");
     player2.getGrand();
+
+
     $("#p2-grand").text(player2.grand);
     $("#p2-subTotal").text("");
     $("#player2Buttons").hide();
     $("#player1Buttons").show();
+    if (player2.grand >= 100) {
+      alert("Congratulations! Player 2 Wins!!!");
+      $("#p2-grand").text("");
+      $("#p2-grand").val(0).text("");
+      $("#p1-grand").text("");
+      $("#p1-grand").val(0).text("");
+    }
   });
 });
