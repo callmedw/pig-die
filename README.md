@@ -32,7 +32,8 @@ This application is a practice of constructors and prototypes using JavaScript t
 
 ## Setup
 
-Install address-book by cloning this repository.
+Clone this repository
+Open index.html in a browser of your choice.
 
 ## Technologies Used
 
