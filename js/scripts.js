@@ -6,7 +6,6 @@ function Player(sub, grand) {
   this.currentRoll=0;
 }
 
-// This prototype works
 Player.prototype.roll = function(roll) {
   this.currentRoll = Math.floor((Math.random() * 6) + 1);
 }
@@ -16,7 +15,6 @@ Player.prototype.getSub = function(){
     this.subTotal += this.currentRoll;
   } else {
     this.subTotal = 0;
-    // alert("Whammy!");
   }
 }
 

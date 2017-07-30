@@ -5,3 +5,42 @@
 #player2Buttons {
   display: none;
 }
+
+body {
+  background-color: #F4F4F4;
+  color: #383838
+}
+
+.jumbotron {
+  background-color: #DDD1C1;
+  color: #383838;
+  text-align: center;
+  margin-top: 25px;
+  width: 1000px;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700px;
+}
+
+button {
+  background-color: #C0B283;
+  border: 1px solid #C0B283;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+#p2-grand, #p1-grand {
+  color: #C0B283;
+}
+
+h3, h1 {
+  color: #383838;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700px;
+}
+
+p {
+  color: #383838;
+  font-family: 'Ek Mukta', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
