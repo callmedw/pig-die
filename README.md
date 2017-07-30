@@ -40,7 +40,7 @@ JavaScript and jQuery
 
 ### Legal
 
-Copyright (c) 2017 **Grady L Shelton**
+Copyright (c) 2017 **Grady L Shelton & Dana Weiss**
 
 This software is licensed under the MIT license.
 
